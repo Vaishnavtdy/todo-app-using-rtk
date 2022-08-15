@@ -16,7 +16,7 @@ function Todo() {
          </h1>
          <div className="w-9/12">{isUpdate ? <EditTodo tempState={tempState} /> : <AddTodo />}</div>
          <div className="mt-5 flex flex-col space-y-4 w-9/12">
-            {todo ?
+            {todo.length ?
                todo.map((item, index) => (
                   <TaskList
                      setTempState={setTempState}
@@ -28,7 +28,7 @@ function Todo() {
                   />
                )) 
                :
-               <h1>No tasks...</h1>
+               <h1 className="text-center mt-5">No tasks...</h1>
             }
          </div>
       </div>
